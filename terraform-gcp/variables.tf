@@ -1,25 +1,26 @@
 variable "project_id" {
   description = "GCP Project ID"
   type        = string
+  default     = "iron-rex-494202-e9"
 }
 
 variable "region" {
   description = "GCP Region"
   type        = string
-  default     = "us-central1"
+  default     = "me-west1"
 }
 
 variable "zone" {
   description = "GCP Zone"
   type        = string
-  default     = "us-central1-a"
+  default     = "me-west1-b"
 }
 
 variable "hf_token" {
   description = "Hugging Face Token for gated models (like Gemma)"
   type        = string
   sensitive   = true
-  default     = ""
+  default     = "dummy"
 }
 
 variable "model_id" {
@@ -31,7 +32,7 @@ variable "model_id" {
 variable "machine_type" {
   description = "GCE Machine Type for the GPU node"
   type        = string
-  default     = "n1-standard-4"
+  default     = "n2-standard-8"
 }
 
 variable "gpu_type" {
